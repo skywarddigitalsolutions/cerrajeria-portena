@@ -25,10 +25,10 @@ export default function Testimonios() {
           {testimonios.map((testimonio) => (
             <div key={testimonio.id} className="p-4 bg-white rounded-lg shadow-md">
               <p className="text-lg italic text-gray-600 mb-4">
-                "{testimonio.texto}"
+                {testimonio.texto}
               </p>
               <h3 className="font-semibold text-gray-800">
-                - {testimonio.autor}
+                {testimonio.autor}
               </h3>
             </div>
           ))}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BiKey, BiMapPin, BiPhoneCall } from "react-icons/bi";
+import {BiPhoneCall } from "react-icons/bi";
 import { BsClock } from "react-icons/bs";
 
 export default function Hero() {
