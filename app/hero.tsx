@@ -4,9 +4,9 @@ import { BsClock } from "react-icons/bs";
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-20 min-h-screen bg-gris overflow-hidden">
+    <section className="relative w-full pt-24 min-h-screen bg-gris overflow-hidden">
       {/* Fondo diagonal */}
-      <div className="absolute top-0 right-0 w-1/12 md:w-1/3 lg:w-1/2 h-full bg-celeste/70 clip-path-diagonal z-0" />
+      <div className="absolute top-0 right-0 w-1/12 md:w-1/3 lg:w-1/2 h-full bg-celeste/70 rounded-bl-2xl clip-path-diagonal z-0" />
 
       <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { BiLock, BiKey, BiSave } from "react-icons/bi"; // Use BiSave instead of BiSafe
@@ -6,25 +6,27 @@ import { BiLock, BiKey, BiSave } from "react-icons/bi"; // Use BiSave instead of
 export default function Products() {
   const [activeProduct, setActiveProduct] = useState<string | null>(null); // Specify the type for useState
 
-  const toggleProduct = (product: string) => { // Specify the type for the parameter
+  const toggleProduct = (product: string) => {
     setActiveProduct(activeProduct === product ? null : product);
   };
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-gris">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-azul text-center mb-8">Nuestros Productos</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Producto 1: Venta de cerraduras */}
-          <div className="relative border rounded-lg shadow-md overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: "url('/Aperturas.jpg')" }} />
-            <div className="relative z-10 p-6">
+          <div className="relative border rounded-lg shadow-md overflow-hidden group">
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
+              <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
+            </div>
+            <div className="relative z-10 p-6 text-white">
               <div className="flex items-center justify-center mb-4">
                 <BiLock className="text-celeste text-5xl" />
               </div>
-              <h3 className="text-xl font-semibold text-azul text-center mb-4">Venta de Cerraduras</h3>
+              <h3 className="text-xl font-semibold text-white text-center mb-4">Venta de Cerraduras</h3>
               <button
                 className="text-sm text-rojo font-semibold hover:underline"
                 onClick={() => toggleProduct("cerraduras")}
@@ -32,7 +34,7 @@ export default function Products() {
                 {activeProduct === "cerraduras" ? "Cerrar detalles" : "Ver más"}
               </button>
               {activeProduct === "cerraduras" && (
-                <div className="mt-4 text-gray-700 text-sm">
+                <div className="mt-4 text-white text-sm">
                   <ul className="list-disc pl-4">
                     <li>Cerraduras de alta seguridad</li>
                     <li>Cerraduras multipunto</li>
@@ -44,13 +46,15 @@ export default function Products() {
           </div>
 
           {/* Producto 2: Copia de llaves */}
-          <div className="relative border rounded-lg shadow-md overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: "url('/Aperturas.jpg')" }} />
-            <div className="relative z-10 p-6">
+          <div className="relative border rounded-lg shadow-md overflow-hidden group">
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
+              <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
+            </div>
+            <div className="relative z-10 p-6 text-white">
               <div className="flex items-center justify-center mb-4">
                 <BiKey className="text-celeste text-5xl" />
               </div>
-              <h3 className="text-xl font-semibold text-azul text-center mb-4">Copia de Llaves</h3>
+              <h3 className="text-xl font-semibold text-white text-center mb-4">Copia de Llaves</h3>
               <button
                 className="text-sm text-rojo font-semibold hover:underline"
                 onClick={() => toggleProduct("llaves")}
@@ -58,7 +62,7 @@ export default function Products() {
                 {activeProduct === "llaves" ? "Cerrar detalles" : "Ver más"}
               </button>
               {activeProduct === "llaves" && (
-                <div className="mt-4 text-gray-700 text-sm">
+                <div className="mt-4 text-white text-sm">
                   <ul className="list-disc pl-4">
                     <li>Copia de todo tipo de llaves</li>
                     <li>Llaves codificadas</li>
@@ -70,13 +74,15 @@ export default function Products() {
           </div>
 
           {/* Producto 3: Cajas fuertes */}
-          <div className="relative border rounded-lg shadow-md overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: "url('/Aperturas.jpg')" }} />
-            <div className="relative z-10 p-6">
+          <div className="relative border rounded-lg shadow-md overflow-hidden group">
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
+              <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
+            </div>
+            <div className="relative z-10 p-6 text-white">
               <div className="flex items-center justify-center mb-4">
-                <BiSave className="text-celeste text-5xl" /> {/* Use BiSave instead of BiSafe */}
+                <BiSave className="text-celeste text-5xl" />
               </div>
-              <h3 className="text-xl font-semibold text-azul text-center mb-4">Cajas Fuertes</h3>
+              <h3 className="text-xl font-semibold text-white text-center mb-4">Cajas Fuertes</h3>
               <button
                 className="text-sm text-rojo font-semibold hover:underline"
                 onClick={() => toggleProduct("cajas")}
@@ -84,7 +90,7 @@ export default function Products() {
                 {activeProduct === "cajas" ? "Cerrar detalles" : "Ver más"}
               </button>
               {activeProduct === "cajas" && (
-                <div className="mt-4 text-gray-700 text-sm">
+                <div className="mt-4 text-white text-sm">
                   <ul className="list-disc pl-4">
                     <li>Cajas fuertes de alta seguridad</li>
                     <li>Instalación y mantenimiento</li>

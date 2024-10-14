@@ -1,8 +1,8 @@
 export default function Nosotros() {
     return (
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gris">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Quiénes Somos</h2>
+          <h2 className="text-3xl md:text-4xl text-azul font-bold text-center mb-8">Quiénes Somos</h2>
           <p className="text-center mb-12 text-gray-600">
             En Cerrajería Porteña, nos dedicamos a brindar un servicio de calidad y confianza desde [Año de Fundación].
             Nuestro compromiso es ofrecer soluciones de cerrajería que superen las expectativas de nuestros clientes.

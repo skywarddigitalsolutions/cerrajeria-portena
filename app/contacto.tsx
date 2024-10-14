@@ -1,8 +1,8 @@
 export default function Contacto() {
     return (
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gris">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+          <h2 className="text-3xl md:text-4xl text-azul font-bold text-center mb-8">Contáctanos</h2>
           <p className="text-center mb-12 text-gray-600">
             Si tienes alguna pregunta o inquietud, ¡no dudes en ponerte en contacto con nosotros!
           </p>
