@@ -7,9 +7,9 @@ import { BiMenu, BiX } from 'react-icons/bi';
 
 const navItems = [
   { href: '/', label: 'Inicio' },
-  { href: '/servicios', label: 'Servicios' },
-  { href: '/productos', label: 'Productos' },
-  { href: '/contacto', label: 'Contacto' },
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#productos', label: 'Productos' },
+  { href: '#contacto', label: 'Contacto' },
 ];
 
 export default function Navbar() {

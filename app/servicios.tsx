@@ -2,7 +2,7 @@ import { BiWrench, BiLock, BiHome } from "react-icons/bi";
 
 export default function Servicios() {
   return (
-    <section id="services" className="py-16 bg-gris">
+    <section id="servicios" className="py-16 bg-gris">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-azul mb-12">
           Nuestros Servicios
