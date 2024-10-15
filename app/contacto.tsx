@@ -10,7 +10,7 @@ export default function Contacto() {
     <section className="py-16 bg-gradient-to-b from-gris to-white" id='contacto'>
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl text-azul font-bold text-center mb-8">Contáctanos</h2>
-        <p className="text-center mb-12 text-gray-600 max-w-2xl mx-auto">
+        <p className="text-center mb-12 text-celeste max-w-2xl mx-auto">
           Estamos aquí para ayudarte con cualquier emergencia de cerrajería. ¡Contáctanos ahora mismo!
         </p>
         
