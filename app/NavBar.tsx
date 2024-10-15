@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BiMenu, BiX } from 'react-icons/bi';
@@ -14,7 +14,6 @@ const navItems = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   
   return (
