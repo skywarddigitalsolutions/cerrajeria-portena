@@ -6,9 +6,6 @@ import { BiLock, BiKey, BiSave } from "react-icons/bi"; // Use BiSave instead of
 export default function Products() {
   const [activeProduct, setActiveProduct] = useState<string | null>(null); // Specify the type for useState
 
-  const toggleProduct = (product: string) => {
-    setActiveProduct(activeProduct === product ? null : product);
-  };
 
   return (
     <section className="py-12 bg-gris">
