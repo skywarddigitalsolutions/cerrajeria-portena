@@ -27,7 +27,7 @@ export default function Home() {
       {!loaded && <Loader />}
       {loaded && (
         <motion.div
-          initial={{ opacity: 0.5 }}         // Empieza invisible
+          initial={{ opacity: 0.2 }}         // Empieza invisible
           animate={{ opacity: 1 }}         // Aparece gradualmente
           exit={{ opacity: 0 }}            // Si se remueve, desaparece suavemente
           transition={{ duration: 1 }}   // Duración de la transición
