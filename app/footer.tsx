@@ -5,8 +5,8 @@ import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'; // Asegúr
 export default function Footer() {
   return (
     <footer className="bg-azul text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between lg:mx-24">
+      <div className="container px-4">
+        <div className="flex flex-col md:flex-row justify-between lg:mx-12">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Cerrajería Porteña</h3>
             <p className="text-gray-300 lg:max-w-xl">
