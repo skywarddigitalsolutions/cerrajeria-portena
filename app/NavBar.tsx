@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold text-gris">
-          <img src="/Logo-cerrajeria-porteña.png" alt="Logo" className="h-16 w-auto" />
+          <img src="/Logo-cerrajeria-porteña.png" alt="Logo" className="h-10 w-auto" />
         </Link>
         
         {/* Links de Navegación */}

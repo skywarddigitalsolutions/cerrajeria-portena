@@ -22,26 +22,17 @@ export default function Products() {
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
               <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
             </div>
-            <div className="relative z-10 p-6 text-white">
-              <div className="flex items-center justify-center mb-4">
+            <div className="relative z-10 p-6 flex flex-col justify-center items-center text-white">
+              <div className="mb-4">
                 <BiLock className="text-celeste text-5xl" />
               </div>
               <h3 className="text-xl font-semibold text-white text-center mb-4">Venta de Cerraduras</h3>
               <button
-                className="text-sm text-rojo font-semibold hover:underline"
-                onClick={() => toggleProduct("cerraduras")}
+                className="text-md bg-celeste rounded-xl px-6 py-2 text-center font-semibold hover:underline"
               >
-                {activeProduct === "cerraduras" ? "Cerrar detalles" : "Ver más"}
+                Ver más
               </button>
-              {activeProduct === "cerraduras" && (
-                <div className="mt-4 text-white text-sm">
-                  <ul className="list-disc pl-4">
-                    <li>Cerraduras de alta seguridad</li>
-                    <li>Cerraduras multipunto</li>
-                    <li>Asesoramiento personalizado</li>
-                  </ul>
-                </div>
-              )}
+              
             </div>
           </div>
 
@@ -50,26 +41,16 @@ export default function Products() {
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
               <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
             </div>
-            <div className="relative z-10 p-6 text-white">
-              <div className="flex items-center justify-center mb-4">
+            <div className="relative z-10 p-6 flex flex-col justify-center items-center text-white">
+              <div className="mb-4">
                 <BiKey className="text-celeste text-5xl" />
               </div>
               <h3 className="text-xl font-semibold text-white text-center mb-4">Copia de Llaves</h3>
               <button
-                className="text-sm text-rojo font-semibold hover:underline"
-                onClick={() => toggleProduct("llaves")}
+                className="text-md bg-celeste rounded-xl px-6 py-2 text-center font-semibold hover:underline"
               >
-                {activeProduct === "llaves" ? "Cerrar detalles" : "Ver más"}
+                Ver más
               </button>
-              {activeProduct === "llaves" && (
-                <div className="mt-4 text-white text-sm">
-                  <ul className="list-disc pl-4">
-                    <li>Copia de todo tipo de llaves</li>
-                    <li>Llaves codificadas</li>
-                    <li>Duplicado de llaves de seguridad</li>
-                  </ul>
-                </div>
-              )}
             </div>
           </div>
 
@@ -78,26 +59,16 @@ export default function Products() {
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Aperturas.jpg')" }}>
               <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-70"></div> {/* Filtro oscuro */}
             </div>
-            <div className="relative z-10 p-6 text-white">
-              <div className="flex items-center justify-center mb-4">
+            <div className="relative z-10 p-6 flex flex-col justify-center items-center text-white">
+              <div className="mb-4">
                 <BiSave className="text-celeste text-5xl" />
               </div>
               <h3 className="text-xl font-semibold text-white text-center mb-4">Cajas Fuertes</h3>
               <button
-                className="text-sm text-rojo font-semibold hover:underline"
-                onClick={() => toggleProduct("cajas")}
+                className="text-md bg-celeste rounded-xl px-6 py-2 text-center font-semibold hover:underline"
               >
-                {activeProduct === "cajas" ? "Cerrar detalles" : "Ver más"}
+                Ver más
               </button>
-              {activeProduct === "cajas" && (
-                <div className="mt-4 text-white text-sm">
-                  <ul className="list-disc pl-4">
-                    <li>Cajas fuertes de alta seguridad</li>
-                    <li>Instalación y mantenimiento</li>
-                    <li>Modelos antirrobo</li>
-                  </ul>
-                </div>
-              )}
             </div>
           </div>
 
