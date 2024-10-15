@@ -21,7 +21,7 @@ export default function Navbar() {
       className='bg-celeste shadow-md'
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           <Link href="/" className="flex-shrink-0">
             <img src="/Logo-cerrajeria-porteña.png" alt="Logo" className="h-12 w-auto" />
           </Link>
