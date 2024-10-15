@@ -1,0 +1,61 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .lock {
+    position: relative;
+    width: 60px;
+    height: 80px;
+    background-color: #4a5568;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: lock-close 2s infinite;
+  }
+  
+  .lock-body {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #2d3748;
+    border-radius: 5px;
+  }
+  
+  .lock-shackle {
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border: 8px solid #2d3748;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    background-color: transparent;
+    transform-origin: bottom center;
+    animation: lock-open 2s infinite;
+  }
+  
+  @keyframes lock-open {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-25deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes lock-close {
+    0%, 100% {
+      background-color: #086da5;
+    }
+    50% {
+      background-color: #aad291;
+    }
+  }
+  
