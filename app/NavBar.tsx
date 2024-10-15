@@ -16,26 +16,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Aplica el efecto de scrolled solo si la pantalla es md o más grande
-      if (window.innerWidth >= 768) {
-        setScrolled(window.scrollY > 20);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: 'spring', stiffness: 120, damping: 20 }}
-      className={`fixed top-0 left-0 right-0 z-50 ${
-        scrolled ? 'bg-celeste shadow-md' : 'md:bg-transparent'
-      } md:transition-all duration-75 bg-celeste`}
+    <div
+      className='bg-celeste shadow-md'
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -88,6 +72,6 @@ export default function Navbar() {
           ))}
         </div>
       </motion.div>
-    </motion.nav>
+    </div>
   );
 }

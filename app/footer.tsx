@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Cerrajería Porteña</h3>
-            <p className="text-gray-300">
+            <p className="text-gray-300 lg:max-w-xl">
               Ofrecemos soluciones de cerrajería de alta calidad y servicio al cliente excepcional desde [Año de Fundación].
             </p>
           </div>
@@ -48,6 +48,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div className='flex justify-center items-center mt-12'>
+            <h5 className='text-celeste text-bold text-md lg:text-xl'>Hecho por Skyward Digital Solutions</h5>
+        </div>
     </footer>
+    
   );
 }
