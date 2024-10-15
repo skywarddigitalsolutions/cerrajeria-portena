@@ -51,7 +51,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon: Icon, value, unit, descriptio
         {count}
         <span className="text-celeste">{unit}</span>
       </div>
-      <p className="text-sm text-gray-600 text-center max-w-[200px]">{description}</p>
+      <p className="text-sm text-azul text-center max-w-[200px]">{description}</p>
     </motion.div>
   );
 };

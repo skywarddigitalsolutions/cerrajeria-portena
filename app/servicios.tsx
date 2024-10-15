@@ -12,7 +12,7 @@ export default function Servicios() {
           <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
             <BiWrench className="text-celeste text-6xl mb-4" />
             <h3 className="text-2xl font-semibold text-azul text-center mb-4">Reparación de Cerraduras</h3>
-            <p className="text-gray-700 text-center mb-8">
+            <p className="text-celeste text-center mb-8">
               Solucionamos cualquier problema con tus cerraduras. Servicio rápido y eficiente.
             </p>
             <button className="mt-auto bg-azul text-white py-2 px-4 rounded-full font-semibold hover:bg-azul/90 transition-all duration-300">
@@ -24,7 +24,7 @@ export default function Servicios() {
           <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
             <BiLock className="text-celeste text-6xl mb-4" />
             <h3 className="text-2xl font-semibold text-azul text-center mb-4">Instalación de Cerraduras</h3>
-            <p className="text-gray-700 text-center mb-8">
+            <p className="text-celeste text-center mb-8">
               Instalamos cerraduras seguras para hogares y negocios. Confía en nuestra experiencia.
             </p>
             <button className="mt-auto bg-azul text-white py-2 px-4 rounded-full font-semibold hover:bg-azul/90 transition-all duration-300">
@@ -36,7 +36,7 @@ export default function Servicios() {
           <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
             <BiHome className="text-celeste text-6xl mb-4" />
             <h3 className="text-2xl font-semibold text-azul text-center mb-4">Apertura de Puertas</h3>
-            <p className="text-gray-700 text-center mb-8">
+            <p className="text-celeste text-center mb-8">
               ¿Te has quedado fuera? Abrimos cualquier tipo de puerta sin causar daños.
             </p>
             <button className="mt-auto bg-azul text-white py-2 px-4 rounded-full font-semibold hover:bg-azul/90 transition-all duration-300">

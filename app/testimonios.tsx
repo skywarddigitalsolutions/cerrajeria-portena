@@ -55,7 +55,7 @@ export default function Testimonios() {
               className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
             >
               <FaQuoteLeft className="text-5xl text-celeste mb-6" />
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl text-azul leading-relaxed mb-8">
                 {testimonios[activeIndex].texto}
               </p>
               <div className="flex items-center justify-between">

@@ -58,8 +58,8 @@ export default function Nosotros() {
                 {stat.value}
                 {typeof stat.value === 'number' && stat.value >= 1000 && '+'}
               </motion.h3>
-              <h4 className="text-xl font-semibold text-gray-700 mb-2">{stat.label}</h4>
-              <p className="text-gray-600 text-sm">{stat.description}</p>
+              <h4 className="text-xl font-semibold text-azul mb-2">{stat.label}</h4>
+              <p className="text-celeste text-sm">{stat.description}</p>
             </motion.div>
           ))}
         </div>

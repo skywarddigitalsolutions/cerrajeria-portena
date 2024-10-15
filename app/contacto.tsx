@@ -33,7 +33,7 @@ export default function Contacto() {
               />
             </motion.div>
             <h3 className="text-2xl font-bold text-azul mb-4">WhatsApp</h3>
-            <p className="text-gray-600 text-center mb-6">
+            <p className="text-celeste text-center mb-6">
               Respuesta inmediata a través de WhatsApp. ¡Escríbenos ahora!
             </p>
             <motion.a
@@ -61,7 +61,7 @@ export default function Contacto() {
                 <FaPhone className="text-3xl text-celeste mr-4" />
                 <div>
                   <h4 className="font-semibold text-azul">Teléfono</h4>
-                  <p className="text-gray-600">+54 11 1234-5678</p>
+                  <p className="text-celeste">+54 11 1234-5678</p>
                 </div>
               </motion.div>
               <motion.div 
@@ -71,7 +71,7 @@ export default function Contacto() {
                 <FaMapMarkerAlt className="text-3xl text-celeste mr-4" />
                 <div>
                   <h4 className="font-semibold text-azul">Dirección</h4>
-                  <p className="text-gray-600">Av. Boedo 1234, CABA</p>
+                  <p className="text-celeste">Av. Boedo 1234, CABA</p>
                 </div>
               </motion.div>
             </div>

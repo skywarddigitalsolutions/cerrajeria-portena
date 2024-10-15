@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between lg:mx-12">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Cerrajería Porteña</h3>
-            <p className="text-gray-300 lg:max-w-xl">
+            <p className="text-gris lg:max-w-xl">
               Ofrecemos soluciones de cerrajería de alta calidad y servicio al cliente excepcional desde [Año de Fundación].
             </p>
           </div>
@@ -36,13 +36,13 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FaFacebookF className="text-gray-300 hover:text-celeste h-6 w-6" />
+                <FaFacebookF className="text-gris hover:text-celeste h-6 w-6" />
               </a>
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram className="text-gray-300 hover:text-celeste h-6 w-6" />
+                <FaInstagram className="text-gris hover:text-celeste h-6 w-6" />
               </a>
               <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <FaTwitter className="text-gray-300 hover:text-celeste h-6 w-6" />
+                <FaTwitter className="text-gris hover:text-celeste h-6 w-6" />
               </a>
             </div>
           </div>
