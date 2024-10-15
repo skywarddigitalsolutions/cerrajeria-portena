@@ -32,7 +32,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gris hover:bg-azul hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  className="text-gris hover:bg-azul hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
