@@ -11,10 +11,10 @@ interface StatItemProps {
 }
 
 const stats: StatItemProps[] = [
-  { icon: BiTimeFive, value: 15, unit: "min", description: "Tiempo promedio de respuesta" },
-  { icon: BiShield, value: 100, unit: "%", description: "Satisfacción del cliente" },
-  { icon: BiLike, value: 5000, unit: "+", description: "Clientes satisfechos en el último año" },
-  { icon: BiKey, value: 10000, unit: "+", description: "Servicios realizados" }
+  { icon: BiTimeFive, value: 15, unit: " min", description: "Tiempo promedio de respuesta" },
+  { icon: BiShield, value: 100, unit: " %", description: "Satisfacción del cliente" },
+  { icon: BiLike, value: 5000, unit: " +", description: "Clientes satisfechos en el último año" },
+  { icon: BiKey, value: 10000, unit: " +", description: "Servicios realizados" }
 ];
 
 const StatItem: React.FC<StatItemProps> = ({ icon: Icon, value, unit, description }) => {

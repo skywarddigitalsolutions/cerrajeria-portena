@@ -58,11 +58,11 @@ export default function Productos() {
                   </p>
                 </div>
                 <motion.button
-                  className="self-start bg-gris text-azul rounded-full px-6 py-2 font-semibold hover:bg-celeste/80 transition-colors"
+                  className="self-start bg-gris text-azul rounded-full px-6 py-2 font-semibold hover:bg-celeste/80 hover:text-gris transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ver más
+                  Consultar
                 </motion.button>
               </div>
               {hoveredProduct === product.id && (
