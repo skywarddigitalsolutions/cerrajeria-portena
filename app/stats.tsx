@@ -59,7 +59,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon: Icon, value, unit, descriptio
 export default function Stats() {
   return (
     <section className="py-16 bg-gris relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-azul opacity-5 transform -skew-y-6"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-azul opacity-5 transform -skew-y-2"></div>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-azul text-center mb-12">
           Nuestro Impacto en Números
