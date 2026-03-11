@@ -11,6 +11,10 @@ export const business = {
     number: "541158698816",
     defaultMessage: "Hola! Quisiera hacer una consulta.",
   },
+  phone: {
+    display: "11 5869-8816",
+    tel: "tel:+5411158698816",
+  },
   address: {
     text: "Boedo, CABA, Argentina",
     city: "Buenos Aires",
@@ -43,7 +47,7 @@ export const business = {
     "/img-cerrajeria-3.jpg",
     "/img-cerrajeria-4.jpg",
   ],
-  domain: "https://cerrajeriaporteña.com.ar",
+  domain: "https://xn--cerrajeriaportea-lub.com.ar",
 } as const;
 
 /* ── Services ─────────────────────────────────────────────── */

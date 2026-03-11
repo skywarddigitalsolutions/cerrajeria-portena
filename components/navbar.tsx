@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import Image from "next/image";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
@@ -52,13 +52,22 @@ export function Navbar() {
           ))}
           <li>
             <a
+              href={business.phone.tel}
+              className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+            >
+              <Phone className="h-4 w-4" />
+              {business.phone.display}
+            </a>
+          </li>
+          <li>
+            <a
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              Escribinos ya
+              WhatsApp
             </a>
           </li>
         </ul>

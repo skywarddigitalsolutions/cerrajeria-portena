@@ -1,6 +1,7 @@
 import React from "react"
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -17,43 +18,38 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const DOMAIN = "https://cerrajeriaporteña.com.ar";
+const DOMAIN = "https://xn--cerrajeriaportea-lub.com.ar";
 
 export const metadata: Metadata = {
   title:
-    "Cerrajería Porteña | Cerrajero en Boedo, CABA — Aperturas 24 hs",
+    "Cerrajero 24 hs en Boedo | Cerrajería Porteña — Aperturas de Emergencia",
   description:
-    "Cerrajería en Boedo, Almagro y Villa Crespo (CABA). Aperturas 24 hs, copia de llaves, cambio de cerraduras y controles remotos. Consultá por WhatsApp.",
-  keywords: [
-    "cerrajero",
-    "cerrajería",
-    "cerrajería Boedo",
-    "cerrajería Almagro",
-    "cerrajería Villa Crespo",
-    "cerrajería CABA",
-    "aperturas 24 hs",
-    "copia de llaves",
-    "cambio de cerradura",
-    "cambio de combinación",
-    "controles remotos",
-    "clonar frecuencia"
-  ],
+    "¿Te quedaste encerrado? Cerrajero 24 hs en Boedo, Almagro y Villa Crespo (CABA). Aperturas de emergencia, copia de llaves y cambio de cerraduras. Llamá ahora: 11 5869-8816.",
   metadataBase: new URL(DOMAIN),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Cerrajería Porteña — Cerrajero en Boedo, CABA",
+    title: "Cerrajero 24 hs en Boedo — Aperturas de Emergencia | Cerrajería Porteña",
     description:
-      "Aperturas 24 hs, copia de llaves, cambio de cerraduras y controles remotos en Boedo, Almagro y Villa Crespo.",
+      "¿Te quedaste encerrado? Aperturas 24 hs en Boedo, Almagro y Villa Crespo. Llamá ahora: 11 5869-8816.",
     url: DOMAIN,
     siteName: "Cerrajería Porteña",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: `${DOMAIN}/img-cerrajeria-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Cerrajero en Boedo — Cerrajería Porteña",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cerrajería Porteña — Cerrajero en Boedo, CABA",
+    title: "Cerrajero 24 hs en Boedo — Aperturas de Emergencia",
     description:
-      "Aperturas 24 hs, copia de llaves, cambio de cerraduras y controles remotos en CABA.",
+      "¿Te quedaste encerrado? Aperturas 24 hs en Boedo, Almagro y Villa Crespo. Llamá ahora: 11 5869-8816.",
+    images: [`${DOMAIN}/img-cerrajeria-1.jpg`],
   },
   robots: {
     index: true,
@@ -115,6 +111,20 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <LoadingAnimation />
         {children}
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-46E0N71DYF"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-46E0N71DYF');
+          `}
+        </Script>
       </body>
     </html>
   );

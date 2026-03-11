@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Phone } from "lucide-react";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -15,8 +16,21 @@ export function Footer() {
           height={60}
           className="h-12 w-auto brightness-0 invert"
         />
-        <p className="text-sm">
-          {business.name} &middot; {business.address.text} &middot;{" "}
+
+        {/* NAP — Name, Address, Phone */}
+        <address className="not-italic text-sm leading-relaxed">
+          <strong className="text-primary-foreground">{business.name}</strong>
+          <br />
+          {business.address.text}
+          <br />
+          <a
+            href={business.phone.tel}
+            className="inline-flex items-center gap-1.5 font-semibold text-primary-foreground/90 underline underline-offset-2 hover:text-primary-foreground"
+          >
+            <Phone className="h-3.5 w-3.5" />
+            {business.phone.display}
+          </a>
+          {" · "}
           <a
             href={getWhatsAppUrl()}
             target="_blank"
@@ -25,7 +39,8 @@ export function Footer() {
           >
             WhatsApp
           </a>
-        </p>
+        </address>
+
         <p className="text-xs text-primary-foreground/50">
           &copy; {year}{" "}
           <a

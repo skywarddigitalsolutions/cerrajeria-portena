@@ -81,7 +81,12 @@ export function AboutSection() {
             >
               <Image
                 src={img}
-                alt={`Local de Cerrajería Porteña ${idx + 1}`}
+                alt={[
+                  "Cerrajero en Boedo — herramientas y trabajo en el local",
+                  "Copia de llaves y cambio de cerraduras en Boedo, CABA",
+                  "Apertura de puertas de emergencia — Cerrajería Porteña",
+                  "Controles remotos y cerraduras — local de Cerrajería Porteña en Boedo",
+                ][idx]}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />

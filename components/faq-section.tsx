@@ -1,13 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import { faqItems } from "@/config/business";
-import { cn } from "@/lib/utils";
 
 export function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section className="bg-background py-16 md:py-24" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-3xl px-4">
@@ -20,46 +13,27 @@ export function FaqSection() {
           </h2>
           <p className="mt-3 text-muted-foreground">
             Respondemos las dudas más comunes sobre nuestros servicios de
-            cerrajería en CABA.
+            cerrajería en Boedo y CABA.
           </p>
         </div>
 
         <div className="divide-y divide-border rounded-xl border border-border bg-card">
-          {faqItems.map((faq, i) => {
-            const isOpen = openIndex === i;
-            return (
-              <div key={faq.question}>
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                  aria-expanded={isOpen}
-                >
-                  <span className="text-sm font-semibold text-card-foreground md:text-base">
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={cn(
-                      "h-5 w-5 shrink-0 text-muted-foreground transition-transform",
-                      isOpen && "rotate-180",
-                    )}
-                  />
-                </button>
-                <div
-                  className={cn(
-                    "grid transition-all",
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
-                  )}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {faqItems.map((faq) => (
+            <details
+              key={faq.question}
+              className="group px-6 py-5 [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-card-foreground md:text-base">
+                {faq.question}
+                <span className="shrink-0 text-muted-foreground transition-transform group-open:rotate-180">
+                  ▾
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
     </section>

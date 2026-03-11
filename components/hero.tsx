@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Shield, Clock, MapPin } from "lucide-react";
+import { Shield, Clock, MapPin, Phone } from "lucide-react";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -19,7 +19,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={business.images[0]}
-          alt="Cerrajería Porteña"
+          alt="Cerrajero en Boedo realizando apertura de puerta"
           fill
           className="object-cover opacity-20"
           priority
@@ -42,40 +42,41 @@ export function Hero() {
         </div>
 
         {/* H1 */}
-        <h1 className="max-w-3xl text-balance text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-7xl">
-          Cerrajería en Boedo
+        <h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-7xl">
+          Cerrajero 24hs en Boedo
         </h1>
 
         {/* Highlighted Service */}
         <div className="flex flex-col items-center gap-2">
           <p className="text-xl font-bold uppercase tracking-widest text-accent md:text-2xl">
-            Aperturas 24 hs - CABA
+            ¿Te quedaste encerrado? Llamanos ya
           </p>
           <div className="h-1 w-12 bg-accent rounded-full" />
         </div>
 
         {/* Subtitle */}
         <p className="max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/80">
-          Atención rápida y profesional con más de 5 años en el rubro.
-          {" "}Cerrajería exclusiva de hogar y venta de controles remotos en{" "}
+          Aperturas de emergencia las 24 hs, los 365 días. Cerrajería exclusiva
+          de hogar con más de 5 años en el rubro en{" "}
           {business.coverageAreas.slice(0, 3).join(", ")} y alrededores.
         </p>
 
         {/* CTAs */}
-        <div className="flex items-center gap-4 sm:flex-row">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href={getWhatsAppUrl("Hola Cerrajeria porteña! Me gustaria obtener mas informacion acerca de sus servicios.")}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={business.phone.tel}
             className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
           >
-            Contactanos
+            <Phone className="h-5 w-5" />
+            Llamar ahora — {business.phone.display}
           </a>
           <a
-            href="#servicios"
+            href={getWhatsAppUrl("Hola! Me quedé encerrado/a y necesito una apertura urgente.")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
-            Ver servicios
+            WhatsApp
           </a>
         </div>
 

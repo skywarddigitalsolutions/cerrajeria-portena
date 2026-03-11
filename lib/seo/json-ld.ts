@@ -3,6 +3,7 @@ import {
   services,
   remoteControls,
   faqItems,
+  testimonials,
 } from "@/config/business";
 
 /* ── helpers ──────────────────────────────────────────────── */
@@ -17,9 +18,17 @@ export function localBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LocksmithService"],
     name: business.name,
-    description: `Cerrajería de hogar en ${business.address.text}. Aperturas 24 hs, copia de llaves, cambio de cerraduras y venta de controles remotos.`,
+    description: `Cerrajería de hogar en ${business.address.text}. Aperturas de emergencia 24 hs, copia de llaves, cambio de cerraduras y venta de controles remotos.`,
     url: business.domain,
-    telephone: `+${business.whatsapp.number}`,
+    telephone: "+5411158698816",
+    priceRange: "$$",
+    image: [
+      `${business.domain}/img-cerrajeria-1.jpg`,
+      `${business.domain}/img-cerrajeria-2.jpg`,
+      `${business.domain}/img-cerrajeria-3.jpg`,
+      `${business.domain}/img-cerrajeria-4.jpg`,
+    ],
+    logo: `${business.domain}/Logo-cerrajeria-portena.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Boedo",
@@ -70,13 +79,34 @@ export function localBusinessJsonLd() {
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: `+${business.whatsapp.number}`,
+      telephone: "+5411158698816",
       contactType: "customer service",
       availableLanguage: "Spanish",
+      contactOption: "TollFree",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: testimonials.length.toString(),
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: t.name,
+      },
+      reviewBody: t.text,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+    })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Servicios de cerrajería",
+      name: "Servicios de cerrajería en Boedo, CABA",
       itemListElement: services.map((s) => ({
         "@type": "Offer",
         itemOffered: {
@@ -139,7 +169,8 @@ export function websiteJsonLd() {
     "@type": "WebSite",
     name: business.name,
     url: business.domain,
-    description: "Cerrajería en Boedo, CABA. Aperturas 24 hs, copia de llaves, cambio de cerraduras y controles remotos.",
+    description:
+      "Cerrajero 24 hs en Boedo, CABA. Aperturas de emergencia, copia de llaves, cambio de cerraduras y controles remotos.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
