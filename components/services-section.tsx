@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react"
 import {
   Key,
@@ -10,6 +12,7 @@ import {
 } from "lucide-react";
 import { services } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const iconMap: Record<string, React.ElementType> = {
   Key,
@@ -61,6 +64,7 @@ export function ServicesSection() {
             href={getWhatsAppUrl("Hola! Quisiera consultar por un servicio de cerrajería.")}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Consultar directamente

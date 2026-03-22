@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Clock, MapPin } from "lucide-react";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./whatsapp-icon";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export function AboutSection() {
   return (
@@ -52,6 +55,7 @@ export function AboutSection() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
               className="mt-2 inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Contactar

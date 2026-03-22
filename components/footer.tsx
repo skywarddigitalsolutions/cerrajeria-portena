@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -25,6 +28,7 @@ export function Footer() {
           <br />
           <a
             href={business.phone.tel}
+            onClick={trackPhoneClick}
             className="inline-flex items-center gap-1.5 font-semibold text-primary-foreground/90 underline underline-offset-2 hover:text-primary-foreground"
           >
             <Phone className="h-3.5 w-3.5" />
@@ -35,6 +39,7 @@ export function Footer() {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="underline underline-offset-2 hover:text-primary-foreground"
           >
             WhatsApp

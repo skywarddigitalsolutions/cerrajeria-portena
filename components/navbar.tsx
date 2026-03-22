@@ -6,6 +6,7 @@ import Image from "next/image";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./whatsapp-icon";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -53,6 +54,7 @@ export function Navbar() {
           <li>
             <a
               href={business.phone.tel}
+              onClick={trackPhoneClick}
               className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
             >
               <Phone className="h-4 w-4" />
@@ -64,6 +66,7 @@ export function Navbar() {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <WhatsAppIcon className="h-4 w-4" />
@@ -104,7 +107,7 @@ export function Navbar() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
+                onClick={() => { setOpen(false); trackWhatsAppClick(); }}
                 className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
               >
                 <WhatsAppIcon className="h-4 w-4" />

@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Shield, Clock, MapPin, Phone } from "lucide-react";
 import { business } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
 const badges = [
   { icon: Clock, label: "Aperturas 24 hs" },
@@ -65,6 +68,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href={business.phone.tel}
+            onClick={trackPhoneClick}
             className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-base font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105"
           >
             <Phone className="h-5 w-5" />
@@ -74,6 +78,7 @@ export function Hero() {
             href={getWhatsAppUrl("Hola! Me quedé encerrado/a y necesito una apertura urgente.")}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             WhatsApp

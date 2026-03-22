@@ -1,6 +1,9 @@
+"use client";
+
 import { Radio } from "lucide-react";
 import { remoteControls } from "@/config/business";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export function ControlsSection() {
   return (
@@ -51,6 +54,7 @@ export function ControlsSection() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackWhatsAppClick}
                 className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Consultar precio

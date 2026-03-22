@@ -22,15 +22,15 @@ const DOMAIN = "https://xn--cerrajeriaportea-lub.com.ar";
 
 export const metadata: Metadata = {
   title:
-    "Cerrajero 24 hs en Boedo | Cerrajería Porteña — Aperturas de Emergencia",
+    "Cerrajero 24hs Boedo y Almagro · Aperturas de Emergencia",
   description:
-    "¿Te quedaste encerrado? Cerrajero 24 hs en Boedo, Almagro y Villa Crespo (CABA). Aperturas de emergencia, copia de llaves y cambio de cerraduras. Llamá ahora: 11 5869-8816.",
+    "¿Te quedaste encerrado/a? Aperturas de emergencia 24hs en Boedo, Almagro y Villa Crespo. Respuesta inmediata, los 365 días. ☎ 11 5869-8816.",
   metadataBase: new URL(DOMAIN),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Cerrajero 24 hs en Boedo — Aperturas de Emergencia | Cerrajería Porteña",
+    title: "Cerrajero 24hs Boedo y Almagro · Aperturas de Emergencia",
     description:
-      "¿Te quedaste encerrado? Aperturas 24 hs en Boedo, Almagro y Villa Crespo. Llamá ahora: 11 5869-8816.",
+      "¿Te quedaste encerrado/a? Aperturas de emergencia 24hs en Boedo, Almagro y Villa Crespo. Respuesta inmediata, los 365 días. ☎ 11 5869-8816.",
     url: DOMAIN,
     siteName: "Cerrajería Porteña",
     locale: "es_AR",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cerrajero 24 hs en Boedo — Aperturas de Emergencia",
+    title: "Cerrajero 24hs Boedo y Almagro · Aperturas de Emergencia",
     description:
-      "¿Te quedaste encerrado? Aperturas 24 hs en Boedo, Almagro y Villa Crespo. Llamá ahora: 11 5869-8816.",
+      "¿Te quedaste encerrado/a? Aperturas de emergencia 24hs en Boedo, Almagro y Villa Crespo. Respuesta inmediata, los 365 días. ☎ 11 5869-8816.",
     images: [`${DOMAIN}/img-cerrajeria-1.jpg`],
   },
   robots: {
@@ -112,7 +112,7 @@ export default function RootLayout({
         <LoadingAnimation />
         {children}
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 + Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-46E0N71DYF"
           strategy="afterInteractive"
@@ -123,6 +123,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-46E0N71DYF');
+            gtag('config', 'AW-6410478700');
           `}
         </Script>
       </body>
